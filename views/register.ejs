@@ -1,24 +1,119 @@
-<h1>register</h1>
-<form action="/register" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .imgcontainer{
+         text-align: center;
+         margin: 24px 0 12px 0;
+         position: relative;
+
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            background-color:black;
+color:white;
+padding:14px 20px;
+margin:8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+border-radius: 40px;
+        }
+
+.container{
+padding: 20px;
+border: 1px solid;
+top: 20px;
+}
+.imgcontainer{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+
+input[type=text], input[type=password], input[type=email]{
+width:100%;
+ padding:12px 20px;
+margin:8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+.close{
+    position: absolute;
+    right: 25px;
+    top:0;
+    color: black;
+    font: 60px;
+    font-weight:bolder;
+}
+.close:hover,
+.close:focus{
+    color: red;
+    cursor: pointer;
+}
+.model-content{
+    background-color: #fefefe;
+    margin:5% auto 15% auto;
+    /* border: 1px solid #908585; */
+    width:80%
+}
+        
+    </style>
+    <form  class="model-content animate" action="/register" method="POST">
+        
+        <div class="container">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="mfa.png" alt="Avatar" class="avatar">
+            </div>
+        <h1>REGISTER</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"
+            required>
+    
+        
+        <label for="Email">email</label>
+        <input type="email" id="email" name="email"
         required>
-
+    
+   
+    <div>
+        <label for="password">password</label>
+        <input type="text" id="password" name="password"
+        required>
+        <button type="submit">register</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
     </div>
-    <label for="Email">email</label>
-    <input type="email" id="email" name="email"
-    required>
-
 </div>
-<div>
-    <label for="password">password</label>
-    <input type="text" id="password" name="password"
-    required>
+    
+    
+    </form>
+ <a href="/login">Login</a>
 </div>
-<button type="submit">register</button>
-
-
 </div>
+<div class="container" style="background-color: aliceblue;">
+<span class="psw">Forgot <a href="#">password?</a></span>
 </form>
-<a href="/login">Login</a>
+</div>
+    
+    
+</body>
+</html>
+
+
