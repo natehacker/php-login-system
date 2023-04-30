@@ -1,36 +1,99 @@
-<h1>Login</h1>
-<form action="/Login" method="POST">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email"
-        required>
-    </div>
-    <div>
-        <label for="password">password</label>
-        <input type="password" id="password" name="password"
-        required>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Document</title>
+</head>
+<body>
 
-    
+  <form  class="model-content" action="/Login" method="POST">
+    <div class="container">
+      <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <i class="material-icons" style="font-size:100px;">person</i>
+      
+    <h1>MFA LOGIN</h1>
+      <div>
+          <label for="email">Email</label>
+          <input type="email" id="text" name="email"
+          required>
+      </div>
+      <div>
+          <label for="password">password</label>
+          <input type="password" id="text" name="password"
+          required>
+      </div>
+      </div>
+      
+  
+  <button type="Login">Login</button>
+  
 
-<button type="Login">Login</button>
-
-
-
-
-<% if (messages.error) { %>
-  <%= messages.error %>
-<% } %>
-<form action="/login" method="POST">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
-  </div>
-  <button type="submit">Login</button>
-
+  
 </form>
-<a href="/register">Register</a>
+  <a href="/register">Register</a>
+</div>
+  <style>
+h1{
+  text-align: center;
+}
+.imgcontainer{
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+ 
+  
+}
+.container{
+  padding: 20px;
+border: 2px solid #ccc;
+top: 20px;
+}
+body{ font-family: Arial, Helvetica, sans-serif;}
+        button{
+ background-color:black;
+color:white;
+padding:14px 20px;
+margin:8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+border-radius: 40px;
+        }
+
+
+input[type=text], input[type=password], input[type=email]{
+width:100%;
+ padding:12px 20px;
+margin:8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+.close{
+    position: absolute;
+    right: 25px;
+    top:0;
+    color: black;
+    font: 60px;
+    font-weight:bolder;
+}
+.close:hover,
+.close:focus{
+    color: red;
+    cursor: pointer;
+}
+.model-content{
+    background-color: #fefefe;
+    margin:5% auto 15% auto;
+    /* border: 1px solid #908585; */
+    width:80%
+}
+  
+  </style>
+</body>
+</html>
+
